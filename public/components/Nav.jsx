@@ -34,7 +34,7 @@ export default function Navbar() {
         <nav
             data-aos="fade-down"
             className={`
-    fixed top-0 z-50 w-full
+    fixed top-0 z-999 w-full
     transition-all duration-500 ease-out
     transform
     ${scrolled
@@ -44,7 +44,7 @@ export default function Navbar() {
   `}
         >
 
-            <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+            <div className="max-w-6xl mx-auto flex items-center lg:justify-between px-6 py-4">
 
                 {/* Logo */}
                 <span className="font-bold text-xl tracking-tight">
@@ -57,12 +57,7 @@ export default function Navbar() {
                         <li
                             key={item}
                             className="
-                relative cursor-pointer transition-opacity
-                hover:opacity-80
-                after:absolute after:left-0 after:-bottom-1
-                after:h-[2px] after:w-full after:bg-current
-                after:scale-x-0 hover:after:scale-x-100
-                after:transition-transform after:duration-300
+                cursor-pointer hover:opacity-60 delay-75 duration-150 ease-in-out transition-all   
               "
                         >
                             {item}
@@ -73,7 +68,7 @@ export default function Navbar() {
                 {/* Botão Hambúrguer */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="md:hidden flex flex-col justify-center gap-2"
+                    className="md:hidden flex flex-col justify-center absolute right-95 gap-2"
                     aria-label="Abrir menu"
                 >
                     <span
@@ -92,7 +87,7 @@ export default function Navbar() {
             {/* Menu Mobile */}
             <div
                 className={`
-          md:hidden overflow-hidden transition-all duration-300 ease-out
+          md:hidden overflow-hidden transition-all duration-300 ease-out 
           ${open ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}
           ${scrolled ? "bg-green-700 text-white" : "bg-white text-green-700"}
         `}

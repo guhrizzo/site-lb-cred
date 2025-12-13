@@ -188,15 +188,16 @@ export default function Home() {
           <div
             data-aos="fade-up"
             data-aos-delay="100"
-            className="bg-slate-100 rounded-3xl p-12 shadow-lg"
+            className="bg-slate-100 rounded-3xl p-4 md:p-12 shadow-lg"
+
           >
-            <ul className="grid gap-6 md:grid-cols-2">
+            <ul className="grid lg:gap-6 gap-5 md:grid-cols-2">
 
               <li data-aos="fade-right" className="flex items-start gap-4">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Atendimento humanizado
                 </p>
               </li>
@@ -205,7 +206,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Zero enrolação e total clareza
                 </p>
               </li>
@@ -214,7 +215,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Explicamos tudo que o mercado tenta esconder
                 </p>
               </li>
@@ -223,7 +224,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Nada de taxas surpresa
                 </p>
               </li>
@@ -232,7 +233,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Processo rápido e seguro
                 </p>
               </li>
@@ -244,7 +245,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   Comunicação direta e sem letras miúdas
                 </p>
               </li>
@@ -253,7 +254,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700">
+                <p className="lg:text-lg text-[14px] text-slate-700">
                   100% alinhado às leis do consumidor
                 </p>
               </li>
@@ -266,7 +267,7 @@ export default function Home() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
                   ✓
                 </span>
-                <p className="text-lg text-slate-700 ">
+                <p className="lg:text-lg text-[14px] text-slate-700 ">
                   Empresa que realmente luta pelo cliente
                 </p>
               </li>
