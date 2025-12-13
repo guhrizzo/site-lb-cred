@@ -1,22 +1,21 @@
 import Footer from '../public/components/footer';
 import Hero from '../public/components/hero';
 import "aos/dist/aos.css";
+import CardsSection from '../public/components/cardsSection'
 
 export default function Home() {
+
   return (
     <div className="">
       <div className=''>
         <Hero />
-        
-        <h2>
-        </h2>
-        <button>
-        </button>
-        <ul>
-          <li>Especialistas em Crédito e Negociação</li>
-          <li>Atendimento Humanizado</li>
-          <li>Mais de 300 vidas transformadas</li>
-        </ul>
+        <div data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+          data-aos-once="true" className="flex flex-col justify-center items-center">
+          <h1 className='text-5xl font-bold mt-16 mb-16'>Nossos Diferenciais!</h1>
+          <CardsSection />
+        </div>
       </div>
       <div>
         <h2>Quem é a Liberty CRED?
