@@ -13,6 +13,12 @@ export default function Jobs() {
     });
   }, []);
 
+  const phone = "5514998420710";
+  const message =
+    "Olá, vim pelo site da Liberty CRED e gostaria de falar com um especialista.";
+
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
   return (
     <section className="bg-slate-100 py-24">
       <div className="max-w-6xl mx-auto px-6">
@@ -22,10 +28,10 @@ export default function Jobs() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="lg:text-[55px] font-bold text-slate-900 mb-4">
             Nossos Serviços
           </h2>
-          <h3 className="text-xl text-slate-600">
+          <h3 className="lg:text-[18px] text-slate-600">
             Soluções Financeiras que Transformam Sua Vida
           </h3>
         </div>
@@ -87,10 +93,24 @@ export default function Jobs() {
         </ul>
 
         {/* CTA */}
-        <div data-aos="zoom-in" data-aos-delay="600" className="flex justify-center mt-16">
-          <button className="bg-green-600 text-white px-10 py-4 rounded-xl cursor-pointer font-semibold hover:bg-green-700 transition shadow-lg">
-            Falar com um especialista
-          </button>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          className="flex justify-center mt-16"
+        >
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              bg-green-600 text-white px-10 py-4 rounded-xl
+              font-semibold shadow-lg
+              hover:bg-green-700 hover:scale-105
+              transition
+            "
+          >
+            Fale com um especialista
+          </a>
         </div>
 
       </div>
