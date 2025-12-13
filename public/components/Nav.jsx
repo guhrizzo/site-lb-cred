@@ -47,7 +47,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <span className="font-bold text-lg">
-          SuaLogo
+          Liberty Cred
         </span>
 
         {/* Menu Desktop */}

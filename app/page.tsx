@@ -76,7 +76,7 @@ export default function Home() {
           {/* Cabeçalho */}
           <div
             data-aos="fade-up"
-            className="text-center max-w-3xl mx-auto mb-16\"
+            className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Como Funciona o Processo
@@ -165,19 +165,116 @@ export default function Home() {
         </div>
       </section>
 
-      <div>
-        <h2>POR QUE A LIBERTY CRED É DIFERENTE?</h2>
-        <h3>A diferença está no cuidado com você.</h3>
-        <ul>
-          <li>Atendimento humanizado</li>
-          <li>Zero enrolação e total clareza</li>
-          <li>Explicamos tudo que o mercado tenta esconder</li>
-          <li>Nada de taxas surpresa</li>
-          <li>Processo rápido e seguro</li>
-          <li>100% alinhado às leis do consumidor</li>
-          <li>Empresa que realmente luta pelo cliente</li>
-        </ul>
-      </div>
+      <section className="bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
+
+          {/* Cabeçalho */}
+          <div
+            data-aos="fade-up"
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Por que a Liberty CRED é diferente?
+            </h2>
+            <h3 className="text-xl text-slate-600">
+              A diferença está no cuidado com você.
+            </h3>
+          </div>
+
+          {/* Card principal */}
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="bg-slate-100 rounded-3xl p-12 shadow-lg"
+          >
+            <ul className="grid gap-6 md:grid-cols-2">
+
+              <li data-aos="fade-right" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Atendimento humanizado
+                </p>
+              </li>
+
+              <li data-aos="fade-right" data-aos-delay="50" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Zero enrolação e total clareza
+                </p>
+              </li>
+
+              <li data-aos="fade-right" data-aos-delay="100" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Explicamos tudo que o mercado tenta esconder
+                </p>
+              </li>
+
+              <li data-aos="fade-right" data-aos-delay="150" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Nada de taxas surpresa
+                </p>
+              </li>
+
+              <li data-aos="fade-right" data-aos-delay="200" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Processo rápido e seguro
+                </p>
+              </li>
+              <li
+                data-aos="fade-right"
+                data-aos-delay="300"
+                className="flex items-start gap-4"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  Comunicação direta e sem letras miúdas
+                </p>
+              </li>
+
+              <li data-aos="fade-right" data-aos-delay="250" className="flex items-start gap-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700">
+                  100% alinhado às leis do consumidor
+                </p>
+              </li>
+
+              <li
+                data-aos="fade-right"
+                data-aos-delay="350"
+                className="flex items-start gap-4"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                  ✓
+                </span>
+                <p className="text-lg text-slate-700 ">
+                  Empresa que realmente luta pelo cliente
+                </p>
+              </li>
+
+
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
       <div>
         <h2>Resultados que falam por si</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia sequi tempore nisi distinctio doloribus saepe non maiores dolores. Dolores quae veritatis nobis ipsam nostrum animi iste est tempore. Accusamus!</p>
