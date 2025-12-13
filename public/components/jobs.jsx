@@ -28,7 +28,7 @@ export default function Jobs() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="lg:text-[55px] text-2xl font-bold text-slate-900 mb-4">
+          <h2 className="lg:text-[55px] text-3xl font-bold text-slate-900 mb-4">
             Nossos Serviços
           </h2>
           <h3 className="lg:text-[18px] text-slate-600">
