@@ -1,19 +1,21 @@
 import Footer from '../public/components/footer';
+import Hero from '../public/components/hero';
+
 
 export default function Home() {
   return (
     <div className="">
-      <div>
-        <h1>A Solução Financeira que Você Precisa. Simples. Transparente. Segura.
-        </h1>
-        <h2>Renegocie dívidas, recupere seu crédito e organize sua vida financeira com apoio profissional, atendimento humanizado e estratégias que realmente funcionam.
+      <div className=''>
+        <Hero />
+        
+        <h2>
         </h2>
-        <button>QUERO UMA CONSULTA GRATUITA
+        <button>
         </button>
         <ul>
           <li>Especialistas em Crédito e Negociação</li>
           <li>Atendimento Humanizado</li>
-          <li>Mais de X vidas transformadas</li>
+          <li>Mais de 300 vidas transformadas</li>
         </ul>
       </div>
       <div>
