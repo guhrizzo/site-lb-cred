@@ -22,10 +22,10 @@ export default function Testimonials() {
           data-aos="fade-up"
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="lg:text-4xl text-[25px] font-bold text-slate-900 mb-4">
             Resultados que falam por si
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="lg:text-xl text-[16px] text-slate-600">
             Veja o que nossos clientes dizem sobre a experiência com a Liberty CRED
           </p>
         </div>

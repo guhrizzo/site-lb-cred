@@ -81,10 +81,10 @@ export default function Home() {
             data-aos="fade-up"
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="lg:text-4xl text-[27px] font-bold text-slate-900 mb-4">
               Como Funciona o Processo
             </h2>
-            <h3 className="text-xl text-slate-600">
+            <h3 className="lg:text-xl text-[16px] text-slate-600">
               Como é o passo a passo na Liberty CRED?
             </h3>
           </div>
@@ -288,23 +288,23 @@ export default function Home() {
             data-aos="zoom-in"
             className="max-w-6xl mx-auto px-6 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="lg:text-5xl text-3xl font-bold text-white mb-6">
               Sua mudança financeira começa agora.
             </h2>
 
-            <h3 className="text-xl md:text-[22px] text-slate-300 mb-10 leading-relaxed">
+            <h3 className="lg:text-xl text-[18px] text-slate-300 mb-10 leading-relaxed">
               Dê o primeiro passo. A análise é gratuita, segura e pode transformar sua vida.
             </h3>
 
             <button
               data-aos="fade-up"
               data-aos-delay="300"
-              className="bg-green-600 hover:bg-green-700 text-white px-15 py-5 rounded-2xl text-lg font-semibold cursor-pointer delay-75 duration-150 transition-all ease-in-out shadow-xl hover:scale-105"
+              className="bg-green-600 hover:bg-green-700 text-white px-15 py-5 rounded-2xl lg:text-lg text-[12px] font-semibold cursor-pointer delay-75 duration-150 transition-all ease-in-out shadow-xl hover:scale-105"
             >
               QUERO MINHA CONSULTA GRATUITA
             </button>
 
-            <p className="mt-6 text-sm text-slate-400">
+            <p className="mt-6 lg:text-sm text-slate-400">
               Atendimento 100% confidencial • Sem compromisso • Dentro da lei
             </p>
           </div>

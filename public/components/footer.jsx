@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <div className="bg-slate-950  text-slate-50 flex ">
-            <ul className="flex min-w-full justify-between items-center p-6">
+            <ul className="lg:flex  min-w-full justify-between items-center lg:p-6 p-4">
                 <li className="font-bold">Informações:
                     <p className="font-normal text-slate-50/50">CNPJ: 55.116.497/0001-08</p>
                     <p className="font-normal text-slate-50/50">Endereço: AV. Dr quinzinho 995, sala 4</p>
