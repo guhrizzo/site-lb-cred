@@ -2,6 +2,7 @@ import Footer from '../public/components/footer';
 import Hero from '../public/components/hero';
 import "aos/dist/aos.css";
 import CardsSection from '../public/components/cardsSection'
+import Jobs from '../public/components/jobs'
 
 export default function Home() {
 
@@ -64,59 +65,106 @@ export default function Home() {
 
           </div>
         </section>
-
-        <h2>NOSSOS SERVIÇOS</h2>
-        <h3>Soluções Financeiras que Transformam Sua Vida
-        </h3>
-        <ul>
-          <li>
-            <p> Limpeza de Nome (Amparo Jurídico Comercial)</p>
-            <p>Remoção de apontamentos indevidos em birôs como Serasa, SPC e Boa Vista, com base em leis como o Art. 42 do CDC.
-            </p>
-          </li>
-          <li>
-            <p> Negociação e Redução de Dívidas
-            </p>
-            <p>Avaliamos suas dívidas e buscamos acordos estratégicos com descontos reais.
-            </p>
-          </li>
-          <li>
-            <p> Consultoria de Crédito
-            </p>
-            <p>Orientação para melhorar seu score e recuperar seu acesso ao mercado de crédito.
-            </p>
-          </li>
-          <li>
-            <p> Intermediação Financeira
-            </p>
-            <p>Acompanhamos e orientamos processos envolvendo financiamentos, dívidas bancárias e regularização financeira.
-            </p>
-          </li>
-          <li>
-            <p>  Auxílio para Acesso a Crédito
-            </p>
-            <p>Preparamos você para conquistar limites maiores, crédito aprovado e vida financeira saudável.
-            </p>
-          </li>
-        </ul>
-        <button>Falar com um especialista</button>
+        <div
+          className="">
+          <Jobs />
+        </div>
       </div>
-      <div>
-        <h2>COMO FUNCIONA O PROCESSO</h2>
-        <h3>Como é o passo a passo na Liberty CRED?</h3>
+      <section className="bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
 
-        <p>Análise Gratuita</p>
-        <p>Você envia sua situação e fazemos um diagnóstico completo.</p>
+          {/* Cabeçalho */}
+          <div
+            data-aos="fade-up"
+            className="text-center max-w-3xl mx-auto mb-16\"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Como Funciona o Processo
+            </h2>
+            <h3 className="text-xl text-slate-600">
+              Como é o passo a passo na Liberty CRED?
+            </h3>
+          </div>
 
-        <p>Estratégia Personalizada</p>
-        <p>Montamos um plano específico para o seu caso, com alternativas reais e seguras.</p>
+          {/* Steps */}
+          <div className="relative grid gap-8 md:grid-cols-4">
 
-        <p>Execução</p>
-        <p>Damos andamento imediato no processo: negociação, acordos, pedidos de retirada, etc.</p>
+            {/* Linha (desktop) */}
+            <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-slate-400" />
 
-        <p>Resultado</p>
-        <p>Você recebe acompanhamento e vê sua situação mudar de verdade.</p>
-      </div>
+            {/* Step 1 */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="relative bg-slate-50 rounded-2xl shadow-md p-8 text-center"
+            >
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white text-xl font-bold">
+                1
+              </div>
+              <h4 className="text-lg font-semibold text-slate-900 mb-3">
+                Análise Gratuita
+              </h4>
+              <p className="text-slate-600">
+                Você envia sua situação e fazemos um diagnóstico completo.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="relative bg-slate-50 rounded-2xl shadow-md p-8 text-center"
+            >
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white text-xl font-bold">
+                2
+              </div>
+              <h4 className="text-lg font-semibold text-slate-900 mb-3">
+                Estratégia Personalizada
+              </h4>
+              <p className="text-slate-600">
+                Montamos um plano específico para o seu caso, com alternativas reais e seguras.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="relative bg-slate-50 rounded-2xl shadow-md p-8 text-center"
+            >
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white text-xl font-bold">
+                3
+              </div>
+              <h4 className="text-lg font-semibold text-slate-900 mb-3">
+                Execução
+              </h4>
+              <p className="text-slate-600">
+                Damos andamento imediato no processo: negociação, acordos, pedidos de retirada, etc.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              className="relative bg-slate-50 rounded-2xl shadow-md p-8 text-center"
+            >
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white text-xl font-bold">
+                4
+              </div>
+              <h4 className="text-lg font-semibold text-slate-900 mb-3">
+                Resultado
+              </h4>
+              <p className="text-slate-600">
+                Você recebe acompanhamento e vê sua situação mudar de verdade.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
       <div>
         <h2>POR QUE A LIBERTY CRED É DIFERENTE?</h2>
         <h3>A diferença está no cuidado com você.</h3>
