@@ -288,7 +288,10 @@ export default function Home() {
       <div className="">
 
       </div>
-      <Testimonials />
+      <section id="depoimentos" className="">
+        <Testimonials />
+      </section>
+      
       <div>
         <section className="bg-slate-900 py-24">
           <div

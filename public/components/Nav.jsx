@@ -5,105 +5,154 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
-    const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-        AOS.init({
-            duration: 700,
-            easing: "ease-out-cubic",
-            once: true,
-        });
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+    });
 
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 60);
-        };
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+    };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const menuItems = [
-        "Home",
-        "Venda seu veículo com dívida",
-        "Depoimentos",
-        "Contato",
-    ];
+  // WhatsApp
+  const phone = "5514998420710";
+  const message =
+    "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(
+    message
+  )}`;
 
-    return (
-        <nav
-            data-aos="fade-down"
-            className={`
-    fixed top-0 z-999 w-full
-    transition-all duration-500 ease-out
-    transform
-    ${scrolled
-                    ? "bg-green-700 text-white shadow-md opacity-100 translate-y-0"
-                    : "bg-white/90 backdrop-blur text-green-700 border-b border-green-200 opacity-95 -translate-y-1"
-                }
-  `}
+  // Scroll helpers
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const scrollToTestimonials = () => {
+    const section = document.getElementById("depoimentos");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setOpen(false);
+  };
+
+  return (
+    <nav
+      data-aos="fade-down"
+      className={`
+        fixed top-0 z-50 w-full
+        transition-all duration-500 ease-out
+        ${scrolled
+          ? "bg-green-700 text-white shadow-md"
+          : "bg-white/90 backdrop-blur text-green-700 border-b border-green-200"}
+      `}
+    >
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+        {/* Logo */}
+        <span
+          onClick={scrollToTop}
+          className="font-bold text-xl tracking-tight cursor-pointer"
         >
+          Liberty Cred
+        </span>
 
-            <div className="max-w-6xl mx-auto flex items-center lg:justify-between justify-around px-6 py-4">
+        {/* Menu Desktop */}
+        <ul className="hidden md:flex gap-8 font-medium items-center">
+          <li onClick={scrollToTop} className="cursor-pointer hover:opacity-70">
+            Home
+          </li>
 
-                {/* Logo */}
-                <span className="font-bold text-xl tracking-tight">
-                    Liberty Cred
-                </span>
+          <li>
+            <a
+              href="https://liberty-landing-page-five.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70"
+            >
+              Venda seu veículo com dívida
+            </a>
+          </li>
 
-                {/* Menu Desktop */}
-                <ul className="hidden md:flex gap-8 font-medium">
-                    {menuItems.map((item) => (
-                        <li
-                            key={item}
-                            className="
-                cursor-pointer hover:opacity-60 delay-75 duration-150 ease-in-out transition-all   
-              "
-                        >
-                            {item}
-                        </li>
-                    ))}
-                </ul>
+          <li
+            onClick={scrollToTestimonials}
+            className="cursor-pointer hover:opacity-70"
+          >
+            Depoimentos
+          </li>
 
-                {/* Botão Hambúrguer */}
-                <button
-                    onClick={() => setOpen(!open)}
-                    className="md:hidden flex flex-col justify-center  gap-2"
-                    aria-label="Abrir menu"
-                >
-                    <span
-                        className={`h-[3px] w-7 rounded-full bg-current transition-all
-              ${open ? "rotate-45 translate-y-[6px]" : ""}
-            `}
-                    />
-                    <span
-                        className={`h-[3px] w-7 rounded-full bg-current transition-all
-              ${open ? "-rotate-45 -translate-y-[6px]" : ""}
-            `}
-                    />
-                </button>
-            </div>
+          <li>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70"
+            >
+              Contato
+            </a>
+          </li>
+        </ul>
 
-            {/* Menu Mobile */}
-            <div
-                className={`
-          md:hidden overflow-hidden transition-all duration-300 ease-out 
-          ${open ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}
+        {/* Botão Mobile */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden flex flex-col gap-2"
+          aria-label="Abrir menu"
+        >
+          <span className={`h-[3px] w-7 bg-current rounded transition ${open ? "rotate-45 translate-y-1.5" : ""}`} />
+          <span className={`h-[3px] w-7 bg-current rounded transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`} />
+        </button>
+      </div>
+
+      {/* Menu Mobile */}
+      <div
+        className={`
+          md:hidden transition-all duration-300 overflow-hidden
+          ${open ? "max-h-72 opacity-100" : "max-h-0 opacity-0"}
           ${scrolled ? "bg-green-700 text-white" : "bg-white text-green-700"}
         `}
+      >
+        <ul className="flex flex-col gap-6 px-6 pb-6 font-medium">
+          <li onClick={scrollToTop} className="cursor-pointer">
+            Home
+          </li>
+
+          <li>
+            <a
+              href="https://liberty-landing-page-five.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
             >
-                <ul className="flex flex-col gap-6 px-6 pb-6 font-medium">
-                    {menuItems.map((item) => (
-                        <li
-                            key={item}
-                            onClick={() => setOpen(false)}
-                            className="cursor-pointer hover:opacity-80"
-                        >
-                            {item}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </nav>
-    );
+              Venda seu veículo com dívida
+            </a>
+          </li>
+
+          <li onClick={scrollToTestimonials} className="cursor-pointer">
+            Depoimentos
+          </li>
+
+          <li>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              Contato
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
