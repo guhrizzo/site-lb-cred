@@ -4,12 +4,14 @@ import "aos/dist/aos.css";
 import CardsSection from '../public/components/cardsSection'
 import Jobs from '../public/components/jobs'
 import Testimonials from '../public/components/Testimonials'
+import WhatsAppButton from '../public/components/WhatsAppButton'
 
 export default function Home() {
 
   return (
     <div className="">
       <div className=''>
+        <WhatsAppButton />
         <Hero />
         <div data-aos="fade-up"
           data-aos-duration="800"
