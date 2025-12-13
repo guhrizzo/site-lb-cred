@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="bg-slate-950 text-slate-50">
+    <div id="footer" className="bg-slate-950 text-slate-50">
       <ul className="lg:flex min-w-full justify-between items-center lg:p-6 p-4 gap-6">
 
         <li className="font-bold">
