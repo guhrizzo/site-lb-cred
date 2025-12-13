@@ -8,6 +8,13 @@ import WhatsAppButton from '../public/components/WhatsAppButton'
 
 export default function Home() {
 
+  const phone = "5514998420710";
+  const message =
+    "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
+
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+
   return (
     <div className="">
       <div className=''>
@@ -296,13 +303,26 @@ export default function Home() {
               Dê o primeiro passo. A análise é gratuita, segura e pode transformar sua vida.
             </h3>
 
-            <button
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               data-aos="fade-up"
               data-aos-delay="300"
-              className="bg-green-600 hover:bg-green-700 text-white px-15 py-5 rounded-2xl lg:text-lg text-[12px] font-semibold cursor-pointer delay-75 duration-150 transition-all ease-in-out shadow-xl hover:scale-105"
+              className="
+    inline-block
+    bg-green-600 hover:bg-green-700 text-white
+    px-15 py-5 rounded-2xl
+    lg:text-lg text-[12px]
+    font-semibold
+    shadow-xl
+    transition-all duration-200 ease-in-out
+    hover:scale-105
+  "
             >
               QUERO MINHA CONSULTA GRATUITA
-            </button>
+            </a>
+
 
             <p className="mt-6 lg:text-sm text-slate-400">
               Atendimento 100% confidencial • Sem compromisso • Dentro da lei
