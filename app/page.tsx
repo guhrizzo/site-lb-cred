@@ -1,6 +1,6 @@
 import Footer from '../public/components/footer';
 import Hero from '../public/components/hero';
-
+import "aos/dist/aos.css";
 
 export default function Home() {
   return (
