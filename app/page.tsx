@@ -3,6 +3,7 @@ import Hero from '../public/components/hero';
 import "aos/dist/aos.css";
 import CardsSection from '../public/components/cardsSection'
 import Jobs from '../public/components/jobs'
+import Testimonials from '../public/components/Testimonials'
 
 export default function Home() {
 
@@ -274,19 +275,38 @@ export default function Home() {
 
         </div>
       </section>
+      <div className="">
 
-      <div>
-        <h2>Resultados que falam por si</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia sequi tempore nisi distinctio doloribus saepe non maiores dolores. Dolores quae veritatis nobis ipsam nostrum animi iste est tempore. Accusamus!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque incidunt repellat nesciunt ut sapiente dicta aliquid animi repellendus non autem tenetur voluptatem ducimus magnam officiis eos reiciendis, recusandae ratione consequuntur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eius quasi soluta, consequatur nemo adipisci at fuga quidem magni, mollitia unde molestiae, dolor magnam quaerat facilis sit enim maiores blanditiis.</p>
       </div>
+      <Testimonials />
       <div>
-        <h2>Sua mudança financeira começa agora.</h2>
-        <h3>Dê o primeiro passo. A análise é gratuita, segura e pode transformar sua vida.</h3>
-        <button>
-          QUERO MINHA CONSULTA GRATUITA
-        </button>
+        <section className="bg-slate-900 py-24">
+          <div
+            data-aos="zoom-in"
+            className="max-w-6xl mx-auto px-6 text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Sua mudança financeira começa agora.
+            </h2>
+
+            <h3 className="text-xl md:text-[22px] text-slate-300 mb-10 leading-relaxed">
+              Dê o primeiro passo. A análise é gratuita, segura e pode transformar sua vida.
+            </h3>
+
+            <button
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="bg-green-600 hover:bg-green-700 text-white px-15 py-5 rounded-2xl text-lg font-semibold cursor-pointer delay-75 duration-150 transition-all ease-in-out shadow-xl hover:scale-105"
+            >
+              QUERO MINHA CONSULTA GRATUITA
+            </button>
+
+            <p className="mt-6 text-sm text-slate-400">
+              Atendimento 100% confidencial • Sem compromisso • Dentro da lei
+            </p>
+          </div>
+        </section>
+
       </div>
       <Footer />
     </div>
