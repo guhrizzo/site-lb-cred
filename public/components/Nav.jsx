@@ -44,7 +44,7 @@ export default function Navbar() {
   `}
         >
 
-            <div className="max-w-6xl mx-auto flex items-center lg:justify-between px-6 py-4">
+            <div className="max-w-6xl mx-auto flex items-center lg:justify-between justify-around px-6 py-4">
 
                 {/* Logo */}
                 <span className="font-bold text-xl tracking-tight">
@@ -68,7 +68,7 @@ export default function Navbar() {
                 {/* Botão Hambúrguer */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="md:hidden flex flex-col justify-center absolute right-95 gap-2"
+                    className="md:hidden flex flex-col justify-center  gap-2"
                     aria-label="Abrir menu"
                 >
                     <span

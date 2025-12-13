@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function WhatsAppButton() {
     const [scrolled, setScrolled] = useState(false);
 
-    const phone = "+551499842-0710";
+    const phone = "5514998420710";
 
     const message = "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
 

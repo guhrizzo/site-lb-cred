@@ -17,7 +17,7 @@ export default function Home() {
           data-aos-duration="800"
           data-aos-delay="100"
           data-aos-once="true" className="flex flex-col justify-center items-center">
-          <h1 className='text-5xl font-bold mt-16 mb-16'>Nossos Diferenciais!</h1>
+          <h1 className='lg:text-5xl text-4xl font-bold lg:mt-16 lg:mb-16 mb-6 mt-6'>Nossos Diferenciais!</h1>
           <CardsSection />
         </div>
       </div>

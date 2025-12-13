@@ -2,8 +2,13 @@ import InfoCard from "./cards";
 
 export default function CardsSection() {
     return (
-        <section className="flex justify-center gap-20 mb-16">
-            
+        <section className="
+  flex flex-col items-center gap-8
+  md:flex-row md:justify-center md:gap-20
+  mb-16
+">
+
+
             <InfoCard
                 number={1}
                 title="Especialistas em Crédito e Negociação."
