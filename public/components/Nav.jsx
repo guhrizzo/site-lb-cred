@@ -1,154 +1,141 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Image from "next/image";
+import { Menu, X, MessageCircle, ExternalLink } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // WhatsApp
   const phone = "5514998420710";
-  const message =
-    "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
-  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(
-    message
-  )}`;
+  const message = "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-  // Scroll helpers
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setOpen(false);
-  };
-
-  const scrollToTestimonials = () => {
-    const section = document.getElementById("depoimentos");
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const offset = 80; // Compensação da altura da navbar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = section.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
     setOpen(false);
   };
 
   return (
     <nav
-      data-aos="fade-down"
       className={`
-        fixed top-0 z-50 w-full
-        transition-all duration-500 ease-out
-        ${scrolled
-          ? "bg-green-700 text-white shadow-md"
-          : "bg-white/90 backdrop-blur text-green-700 border-b border-green-200"}
+        fixed top-0 z-100 w-full transition-all duration-500
+        ${scrolled 
+          ? "py-3 bg-slate-900/80 backdrop-blur-lg border-b border-white/10 shadow-xl" 
+          : "py-5 bg-transparent"}
       `}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
+        
         {/* Logo */}
-        <span
-          onClick={scrollToTop}
-          className="font-bold text-xl tracking-tight cursor-pointer"
+        <div 
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="relative z-10 cursor-pointer transition-transform hover:scale-105"
         >
-          Liberty Cred
-        </span>
+          <Image 
+            src="/Logo-LibertyCred.png" 
+            width={120} 
+            height={40} 
+            alt="Liberty Cred Logo"
+            className={`${!scrolled && "brightness-0 invert"}`} 
+          />
+        </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex gap-8 font-medium items-center">
-          <li onClick={scrollToTop} className="cursor-pointer hover:opacity-70">
-            Home
-          </li>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex gap-8 text-sm font-bold uppercase tracking-widest">
+            <li>
+              <button 
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className={`transition-colors ${scrolled ? "text-slate-300 hover:text-emerald-400" : "text-white/80 hover:text-white"}`}
+              >
+                Home
+              </button>
+            </li>
+            <li>
+              <a 
+                href="https://libertcar.net.br" 
+                target="_blank"
+                className={`flex capitalize items-center gap-1 transition-colors ${scrolled ? "text-slate-300  hover:text-emerald-400" : "text-white/80 hover:text-white"}`}
+              >
+                Venda seu veículo com dívida
+              </a>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection("depoimentos")}
+                className={`transition-colors ${scrolled ? "text-slate-300 hover:text-emerald-400" : "text-white/80 hover:text-white"}`}
+              >
+                Depoimentos
+              </button>
+            </li>
+          </ul>
 
-          <li>
-            <a
-              href="https://liberty-landing-page-five.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70"
-            >
-              Venda seu veículo com dívida
-            </a>
-          </li>
-
-          <li
-            onClick={scrollToTestimonials}
-            className="cursor-pointer hover:opacity-70"
+          {/* CTA Button na Navbar */}
+          <a
+            href={whatsappLink}
+            target="_blank"
+            className="flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-emerald-50 text-xs font-black uppercase rounded-xl transition-all shadow-lg shadow-emerald-900/20"
           >
-            Depoimentos
-          </li>
+            <MessageCircle size={16} />
+            Contato
+          </a>
+        </div>
 
-          <li>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70"
-            >
-              Contato
-            </a>
-          </li>
-        </ul>
-
-        {/* Botão Mobile */}
+        {/* Botão Mobile Burger */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-2"
-          aria-label="Abrir menu"
+          className="md:hidden relative z-10 p-2 text-white bg-emerald-600 rounded-lg"
         >
-          <span className={`h-[3px] w-7 bg-current rounded transition ${open ? "rotate-45 translate-y-1.5" : ""}`} />
-          <span className={`h-[3px] w-7 bg-current rounded transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`} />
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Menu Mobile */}
+      {/* Overlay Menu Mobile */}
       <div
         className={`
-          md:hidden transition-all duration-300 overflow-hidden
-          ${open ? "max-h-72 opacity-100" : "max-h-0 opacity-0"}
-          ${scrolled ? "bg-green-700 text-white" : "bg-white text-green-700"}
+          absolute top-0 left-0 w-full bg-slate-900 transition-all duration-500 ease-in-out overflow-hidden
+          ${open ? "max-h-screen opacity-100 py-24" : "max-h-0 opacity-0"}
         `}
       >
-        <ul className="flex flex-col gap-6 px-6 pb-6 font-medium">
-          <li onClick={scrollToTop} className="cursor-pointer">
+        <ul className="flex flex-col items-center gap-8 text-xl font-black text-white uppercase tracking-tighter">
+          <li onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setOpen(false); }}>
             Home
           </li>
-
           <li>
-            <a
-              href="https://liberty-landing-page-five.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-            >
-              Venda seu veículo com dívida
+            <a href="https://libertycar.net.br" target="_blank" className="text-emerald-400">
+              Venda seu Veículo
             </a>
           </li>
-
-          <li onClick={scrollToTestimonials} className="cursor-pointer">
+          <li onClick={() => scrollToSection("depoimentos")}>
             Depoimentos
           </li>
-
-          <li>
+          <li className="w-full px-10">
             <a
               href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-3 w-full py-4 bg-emerald-600 rounded-2xl"
             >
-              Contato
+              <MessageCircle size={24} />
+              CONTATO WHATSAPP
             </a>
           </li>
         </ul>
