@@ -3,7 +3,7 @@
 import { MessageCircle, ShieldCheck, Zap } from "lucide-react";
 
 export default function CTAFinal() {
-  const phone = "5514998420710";
+  const phone = "5514996645510";
   const message = "Olá, vim pelo site da Liberty CRED e gostaria de falar com um especialista.";
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 

@@ -7,7 +7,7 @@ export default function WhatsAppButton() {
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
-  const phone = "5514998659046";
+  const phone = "5514996645510";
   const message = "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 

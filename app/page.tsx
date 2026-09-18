@@ -12,7 +12,7 @@ import Diferencias from '../public/components/Diferencias'
 
 export default function Home() {
 
-  const phone = "5514998420710";
+  const phone = "5514996645510";
   const message =
     "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
 

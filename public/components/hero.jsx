@@ -3,13 +3,26 @@
 import { MessageCircle, ShieldCheck, TrendingUp, CreditCard, CheckCircle } from "lucide-react";
 
 export default function Hero() {
-  const phone = "5514998420710";
+  const phone = "5514996645510";
   const message = "Olá, vim pelo site da Liberty CRED e gostaria de uma análise gratuita.";
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
     <section className="relative min-h-dvh flex items-center overflow-hidden bg-[#020617]">
       
+      {/* Vídeo de fundo */}
+      <video
+        className="absolute inset-0 z-0 w-full h-full object-cover"
+        src="/hero-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#020617]/95 via-[#020617]/80 to-[#020617]/60" />
+
       {/* Background Pro: Luzes Suaves */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-emerald-600/10 blur-[130px]" />
@@ -60,7 +73,7 @@ export default function Hero() {
           {/* Lado Direito: Composição Visual Profissional (Substituindo o ícone grandão) */}
           <div className="relative hidden lg:block">
             {/* Card Principal de "Score" */}
-            <div className="relative z-20 bg-slate-900/50 backdrop-blur-xl border border-white/10 p-8 rounded-4xl shadow-2xl">
+            <div className="relative z-20 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-white/20 p-8 rounded-4xl shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.25)]">
               <div className="flex justify-between items-start mb-8">
                 <div>
                   <p className="text-slate-400 text-sm font-medium mb-1">Previsão de Score</p>
@@ -83,11 +96,11 @@ export default function Hero() {
             </div>
 
             {/* Elementos Decorativos Flutuantes */}
-            <div className="absolute -top-10 -right-10 z-30 bg-emerald-600 p-6 rounded-4xl shadow-xl animate-bounce-slow">
+            <div className="absolute -top-10 -right-10 z-30 bg-gradient-to-br from-emerald-400/50 to-emerald-600/40 backdrop-blur-xl backdrop-saturate-150 border border-emerald-200/30 p-6 rounded-4xl shadow-[0_8px_32px_rgba(16,185,129,0.25),inset_0_1px_0_rgba(255,255,255,0.35)] animate-bounce-slow">
               <CreditCard size={40} className="text-white" />
             </div>
 
-            <div className="absolute -bottom-6 -left-6 z-30 bg-white/5 backdrop-blur-lg border border-white/10 px-6 py-4 rounded-2xl shadow-xl">
+            <div className="absolute -bottom-6 -left-6 z-30 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-white/20 px-6 py-4 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.25)]">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-white text-sm font-bold tracking-tight">Análise em tempo real ativa</span>
